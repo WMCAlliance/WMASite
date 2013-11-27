@@ -1,0 +1,42 @@
+<center>Prefer to use your own IRC client to chat with us? <strong>Server:</strong> irc.wma.im <strong>Channel:</strong> #minecraft</center><center>Keep in mind we highly recommend using an IRC client, to get better notifications, chat history and more.</center>
+[php] $current_user = wp_get_current_user(); [/php]
+
+[php]$current_user = wp_get_current_user();
+if ( 0 == $current_user->ID ) {
+    echo 'We hate to do this to you, but as you are not logged in you cannot chat through this website. <a href="/login">Login now</a>.';
+} else {
+   echo '<iframe src="http://widget00.mibbit.com/';
+   echo '?server=irc.echelon4.net';
+   echo '&channel=%23minecraft';
+   echo '&delay=0';
+   echo '&showMotd=false';
+   echo '&customprompt=Welcome to the WMA chat';
+   echo '&nick=';
+   echo $current_user->user_login;
+   echo '&autoConnect=true" height="500" width="100%"></iframe>';
+}[/php]
+<h3>IRC Clients we recommend:</h3>
+<table style="text-align: center;">
+<tbody>
+<tr style="font-weight: bold;">
+<td>Windows Desktop</td>
+<td>Mac OS</td>
+<td>Linux</td>
+<td>Windows Metro</td>
+<td>iOS</td>
+<td>Android</td>
+<td>Windows Phone</td>
+</tr>
+<tr>
+<td><a href="http://hexchat.github.io/downloads.html" target="_blank">HexChat</a></td>
+<td><a href="http://colloquy.info/downloads.html" target="_blank">Colloquy</a></td>
+<td><a href="http://hexchat.github.io/downloads.html" target="_blank">HexChat</a></td>
+<td><a href="http://apps.microsoft.com/windows/en-us/app/irc-explorer/c210318f-2ec5-4ebf-ac55-87641b4a7733" target="_blank">IRC Explorer</a></td>
+<td><a href="http://limechat.net/iphone/" target="_blank">Limechat</a>
+<a href="http://colloquy.mobi/" target="_blank">Mobile Colloquy</a></td>
+<td><a href="http://www.andchat.net/" target="_blank">AndChat</a></td>
+<td><a href="http://www.adafy.com/irc/" target="_blank">IRC7</a></td>
+</tr>
+</tbody>
+</table>
+Are we missing your favourite app, or your Operating System of choice? Let us know <a href="http://wma.im/forums/bugs-and-errors/" target="_blank">on the forums</a>!
